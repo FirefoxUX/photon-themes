@@ -1,0 +1,36 @@
+@keyframes lightPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.ant-spin {
+  .ant-spin-dot {
+    &::before {
+      font-size: 20px;
+      font-family: "photon-icons";
+      content: "\e91c";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      animation: 1s lightPulse infinite linear;
+    }
+  }
+
+  &.ant-spin-sm .ant-spin-dot {
+    &::before {
+      font-size: 14px;
+    }
+  }
+
+  &.ant-spin-lg .ant-spin-dot {
+    &::before {
+      font-size: 32px;
+    }
+  }
+
+  i {
+    display: none;
+  }
+}
