@@ -22,7 +22,8 @@ const overrides = {
   'menu-fold': 'close-bold',
   'folder-open': 'open-dir',
 
-  'exclamation-circle.ant-alert-icon': 'warning'
+  'exclamation-circle.ant-alert-icon': 'warning',
+  'exclamation-circle-o.ant-alert-icon': 'warning'
 };
 
 const now = (new Date()).toLocaleString();
