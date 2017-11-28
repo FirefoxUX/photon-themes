@@ -65,12 +65,15 @@
     background: #b1b1b2;
   }
 
-  &.ant-btn-dashed:not([disabled]) {
+  &.ant-btn-dashed {
     background: #fff;
     border: 1px dashed #e1e1e2;
 
-    &:hover, &:focus {
-      background: #e1e1e2;
+    &:not([disabled]) {
+      &:hover,
+      &:focus {
+        background: #e1e1e2;
+      }
     }
   }
 
