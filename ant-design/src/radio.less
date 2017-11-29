@@ -1,5 +1,7 @@
 // Radio buttons inherit most styling through the default button.
-.ant-radio-button-wrapper:extend(.ant-btn) {
+.ant-radio-button-wrapper {
+  @extend(.ant-btn);
+
   &:first-child {
     border: none;
   }
@@ -9,4 +11,6 @@
   }
 }
 
-.ant-radio-button-wrapper-checked:extend(.ant-btn.ant-btn-primary:not([disabled])) {}
+.ant-radio-button-wrapper-checked {
+  @extend(.ant-btn.ant-btn-primary:not([disabled]));
+}

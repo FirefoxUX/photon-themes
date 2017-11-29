@@ -6,8 +6,8 @@
   }
 
   &.ant-alert-info {
-    border: none;
     background: @blue-50;
+    border: none;
     border: 2px solid @blue-60;
     color: @white;
 
@@ -31,21 +31,25 @@
   }
 
   &.ant-alert-error {
-    border: none;
     background: @red-50;
+    border: none;
     border: 2px solid @red-60;
 
-    &, .anticon, .ant-alert-message {
+    &,
+    .anticon,
+    .ant-alert-message {
       color: @white !important;
     }
   }
 
   &.ant-alert-warning {
-    border: none;
     background: @yellow-50;
+    border: none;
     border: 2px solid @yellow-60;
 
-    &, .anticon, .ant-alert-message {
+    &,
+    .anticon,
+    .ant-alert-message {
       color: @black !important;
     }
   }
@@ -56,23 +60,21 @@
   }
 }
 
-
-
 .anticon.ant-alert-icon {
-  top: 10px;
   left: 9px;
+  top: 10px;
 }
 
 .ant-alert-with-description .anticon.ant-alert-icon {
-  top: 15px;
   left: 18px;
+  top: 15px;
 }
 
 .ant-alert-warning {
   .ant-alert-description a {
-    transition: 0.2s border @photon-easing;
-    color: @blue-70;
     border-bottom: 1px dotted rgba(0, 0, 0, 0);
+    color: @blue-70;
+    transition: 0.2s border @photon-easing;
 
     &:hover,
     &:focus {
