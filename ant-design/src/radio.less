@@ -1,16 +1,40 @@
 // Radio buttons inherit most styling through the default button.
-.ant-radio-button-wrapper {
-  @extend(.ant-btn);
+.ant-radio-button-wrapper:extend(.ant-btn) {
+  &,
+  .ant-radio-group-large & {
+    border-radius: 0;
+  }
 
   &:first-child {
     border: none;
+    border-radius: 2px 0 0 2px;
   }
 
-  .ant-radio-group-large & {
+  &:last-child {
+    border-radius: 0 2px 2px 0;
+  }
+
+  .ant-radio-group-large {
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  .ant-radio-group-large &:extend(.ant-btn-lg) {
     line-height: 0;
   }
+
+  &:not(:first-child)::before {
+    background-color: fade(@black, 15%);
+  }
 }
 
-.ant-radio-button-wrapper-checked {
-  @extend(.ant-btn.ant-btn-primary:not([disabled]));
-}
+/*stylelint-disable-next-line block-no-empty*/
+.ant-radio-button-wrapper-disabled:extend(.ant-btn[disabled]){}
+
+/*stylelint-disable-next-line block-no-empty*/
+.ant-radio-button-wrapper-checked:extend(.ant-btn.ant-btn-primary:not([disabled])) {}
