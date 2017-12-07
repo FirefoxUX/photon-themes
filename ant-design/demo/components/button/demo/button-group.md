@@ -41,10 +41,10 @@ ReactDOM.render(
 
     <h4>With Icon</h4>
     <ButtonGroup>
-      <Button type="primary">
+      <Button type="primary" style={{ flexDirection: "row" }}>
         <Icon type="left" />Go back
       </Button>
-      <Button type="primary">
+      <Button type="primary" style={{ flexDirection: "row" }}>
         Go forward<Icon type="right" />
       </Button>
     </ButtonGroup>

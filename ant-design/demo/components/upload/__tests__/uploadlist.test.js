@@ -59,7 +59,8 @@ describe('Upload List', () => {
     expect(wrapper.find('.ant-upload-list-item').length).toBe(2);
     wrapper.find('.ant-upload-list-item').at(0).find('.anticon-cross').simulate('click');
     await delay(400);
-    expect(wrapper.find('.ant-upload-list-item').length).toBe(1);
+    wrapper.update();
+    expect(wrapper.find('.ant-upload-list-item').hostNodes().length).toBe(1);
   });
 
   it('should be uploading when upload a file', (done) => {
@@ -201,5 +202,63 @@ describe('Upload List', () => {
     });
     wrapper.find(Form).simulate('submit');
     expect(errors).toBeNull();
+  });
+
+  it('should support onPreview', () => {
+    const handlePreview = jest.fn();
+    const wrapper = mount(
+      <Upload
+        listType="picture-card"
+        defaultFileList={fileList}
+        onPreview={handlePreview}
+      >
+        <button>upload</button>
+      </Upload>
+    );
+    wrapper.find('.anticon-eye-o').at(0).simulate('click');
+    expect(handlePreview).toBeCalledWith(fileList[0]);
+    wrapper.find('.anticon-eye-o').at(1).simulate('click');
+    expect(handlePreview).toBeCalledWith(fileList[1]);
+  });
+
+  it('should support onRemove', async () => {
+    const handleRemove = jest.fn();
+    const handleChange = jest.fn();
+    const wrapper = mount(
+      <Upload
+        listType="picture-card"
+        defaultFileList={fileList}
+        onRemove={handleRemove}
+        onChange={handleChange}
+      >
+        <button>upload</button>
+      </Upload>
+    );
+    wrapper.find('.anticon-delete').at(0).simulate('click');
+    expect(handleRemove).toBeCalledWith(fileList[0]);
+    wrapper.find('.anticon-delete').at(1).simulate('click');
+    expect(handleRemove).toBeCalledWith(fileList[1]);
+    await delay(0);
+    expect(handleChange.mock.calls.length).toBe(2);
+  });
+
+  it('should generate thumbUrl from file', async () => {
+    const handlePreview = jest.fn();
+    const newFileList = [...fileList];
+    const newFile = { ...fileList[0], uid: -3, originFileObj: new File([], 'xxx.png') };
+    delete newFile.thumbUrl;
+    newFileList.push(newFile);
+    const wrapper = mount(
+      <Upload
+        listType="picture-card"
+        defaultFileList={newFileList}
+        onPreview={handlePreview}
+      >
+        <button>upload</button>
+      </Upload>
+    );
+    wrapper.setState({});
+    await delay(0);
+    expect(wrapper.state().fileList[2].thumbUrl).not.toBeFalsy();
   });
 });

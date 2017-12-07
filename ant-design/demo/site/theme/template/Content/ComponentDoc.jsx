@@ -79,7 +79,7 @@ export default class ComponentDoc extends React.Component {
       <DocumentTitle title={`${subtitle || ''} ${title[locale] || title} - Ant Design`}>
         <article>
           <Affix className="toc-affix" offsetTop={16}>
-            <ul className="toc demos-anchor">
+            <ul id="demo-toc" className="toc">
               {jumper}
             </ul>
           </Affix>
@@ -89,6 +89,7 @@ export default class ComponentDoc extends React.Component {
               {
                 !subtitle ? null : <span className="subtitle">{subtitle}</span>
               }
+              <EditButton title={<FormattedMessage id="app.content.edit-page" />} filename={filename} />
             </h1>
             {
               props.utils.toReactComponent(

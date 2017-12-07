@@ -48,10 +48,10 @@ class ButtonSize extends React.Component {
         <Button type="primary" icon="download" size={size}>Download</Button>
         <br />
         <Button.Group size={size}>
-          <Button type="primary">
+          <Button type="primary" style={{ flexDirection: "row" }}>
             <Icon type="left" />Backward
           </Button>
-          <Button type="primary">
+          <Button type="primary" style={{ flexDirection: "row" }}>
             Forward<Icon type="right" />
           </Button>
         </Button.Group>
