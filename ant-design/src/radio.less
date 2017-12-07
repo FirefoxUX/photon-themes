@@ -1,3 +1,90 @@
+.ant-radio-wrapper {
+  &:hover,
+  &:focus {
+    .ant-radio {
+      .ant-radio-inner {
+        background: fade(@grey-90, 20%);
+        border-color: fade(@grey-90, 30%);
+      }
+
+      &.ant-radio-checked .ant-radio-inner {
+        background: @blue-70;
+        border-color: @blue-70;
+      }
+    }
+  }
+
+  &:active {
+    .ant-radio {
+      .ant-radio-inner {
+        background: fade(@grey-90, 30%);
+        border-color: fade(@grey-90, 30%);
+      }
+
+      &.ant-radio-checked .ant-radio-inner {
+        background: @blue-80;
+        border-color: @blue-80;
+      }
+    }
+  }
+}
+
+.ant-radio {
+  .ant-radio-inner {
+    background: fade(@grey-90, 10%);
+    border-color: fade(@grey-90, 30%);
+
+    &::after {
+      border-radius: 100%;
+      height: 9px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 9px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .ant-radio-inner {
+      background: fade(@grey-90, 20%);
+    }
+  }
+
+  &:active {
+    .ant-radio-inner {
+      background: fade(@grey-90, 30%);
+    }
+  }
+
+  &.ant-radio-checked {
+    .ant-radio-inner {
+      background: @blue-60;
+      border-color: @blue-60;
+
+      &::after {
+        background: @white;
+        transform: translate(-50%, -50%) scale(0.875);
+      }
+
+      &:hover,
+      &:focus {
+        .ant-radio-inner {
+          background: @blue-70;
+          border-color: @blue-70;
+        }
+      }
+
+      &:active {
+        .ant-radio-inner {
+          background: @blue-80;
+          border-color: @blue-80;
+        }
+      }
+    }
+  }
+}
+
 // Radio buttons inherit most styling through the default button.
 .ant-radio-button-wrapper:extend(.ant-btn) {
   &,
@@ -38,3 +125,15 @@
 
 /*stylelint-disable-next-line block-no-empty*/
 .ant-radio-button-wrapper-checked:extend(.ant-btn.ant-btn-primary:not([disabled])) {}
+
+.ant-radio-button-wrapper-disabled {
+  opacity: 0.4;
+
+  &.ant-radio-button-wrapper-checked {
+    background: @blue-60;
+  }
+}
+
+.ant-radio-disabled {
+  opacity: 0.4;
+}
