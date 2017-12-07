@@ -1,0 +1,38 @@
+.ant-btn.ant-dropdown-trigger {
+  flex-direction: row;
+}
+
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu {
+  background: @white;
+  color: @black;
+  font-weight: 300;
+
+  &:not(.ant-dropdown-menu-submenu-disabled),
+  & > a {
+    &:hover,
+    &:focus,
+    &:active {
+      background: @blue-60;
+
+      &,
+      .ant-dropdown-menu-submenu-title {
+        color: @white;
+      }
+    }
+  }
+
+  &.ant-dropdown-menu-submenu-disabled {
+    &,
+    .ant-dropdown-menu-submenu-title,
+    a {
+      cursor: not-allowed;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: fade(@blue-60, 40%);
+    }
+  }
+}

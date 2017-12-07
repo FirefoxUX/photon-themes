@@ -23,7 +23,10 @@ const overrides = {
   'folder-open': 'open-dir',
 
   'exclamation-circle.ant-alert-icon': 'warning',
-  'exclamation-circle-o.ant-alert-icon': 'warning'
+  'exclamation-circle-o.ant-alert-icon': 'warning',
+  'info-circle.ant-alert-icon': 'info',
+  'check-circle.ant-alert-icon': 'check',
+  'check-circle-o.ant-alert-icon': 'check'
 };
 
 const now = (new Date()).toLocaleString();

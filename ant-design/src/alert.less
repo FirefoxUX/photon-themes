@@ -1,62 +1,120 @@
 .ant-alert {
   box-shadow: @shadow-1;
+  padding: 9px 48px 7px 32px;
+
+  &.ant-alert-no-icon {
+    padding: 8px 48px 8px 12px;
+  }
+
+  &:not(.ant-alert-banner) {
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+  }
 
   .ant-alert-message {
     font-weight: 400;
   }
 
-  &.ant-alert-info {
-    background: @blue-50;
-    border: none;
-    border: 2px solid @blue-60;
-    color: @white;
 
-    &,
-    .anticon,
-    .ant-alert-message,
-    a {
-      color: @white !important;
+  .ant-btn {
+    background: fade(@grey-90, 10%);
+
+    &:hover {
+      background: fade(@grey-90, 20%);
+    }
+
+    &:active {
+      background: fade(@grey-90, 30%);
     }
   }
+}
 
-  &.ant-alert-success {
-    background: fade(@green-50, 50%);
-    border: 2px solid @green-50;
+// Generic info (grey) -----------------------
+.ant-alert.ant-alert-info {
+  background: @grey-20;
+  // border: 2px solid @blue-60;
+  color: @grey-90;
 
-    &,
-    .anticon,
-    .ant-alert-message {
-      color: @green-90 !important;
-    }
+  &,
+  .anticon,
+  .ant-alert-message,
+  a {
+    color: @grey-90 !important;
+  }
+}
+
+// Warning (yellow) -----------------------
+.ant-alert.ant-alert-warning {
+  background: @yellow-50;
+  // border: 2px solid @yellow-60;
+
+  &,
+  .anticon,
+  .ant-alert-message {
+    color: @yellow-90 !important;
   }
 
-  &.ant-alert-error {
-    background: @red-50;
-    border: none;
-    border: 2px solid @red-60;
+  .ant-btn {
+    background: @yellow-60;
 
-    &,
-    .anticon,
-    .ant-alert-message {
-      color: @white !important;
+    &:hover {
+      background: @yellow-70;
+    }
+
+    &:active {
+      background: @yellow-80;
     }
   }
+}
 
-  &.ant-alert-warning {
-    background: @yellow-50;
-    border: none;
-    border: 2px solid @yellow-60;
+// Success (green) -----------------------
+.ant-alert.ant-alert-success {
+  background: @green-50;
+  // border: 2px solid @green-50;
 
-    &,
-    .anticon,
-    .ant-alert-message {
-      color: @black !important;
-    }
+  &,
+  .anticon,
+  .ant-alert-message {
+    color: @green-90 !important;
   }
 
-  // banner = no borders
-  &.ant-alert-banner {
-    border: none;
+  .ant-btn {
+    background: @green-60;
+
+    &:hover {
+      background: @green-70;
+      color: @white;
+    }
+
+    &:active {
+      background: @green-80;
+      color: @white;
+    }
+  }
+}
+
+// Error (red) -----------------------
+.ant-alert.ant-alert-error {
+  background: @red-50;
+  // border: 2px solid @red-60;
+
+  &,
+  .anticon,
+  .ant-alert-message {
+    color: @white !important;
+  }
+
+  .ant-btn {
+    background: @red-60;
+
+    &:hover {
+      background: @red-70;
+    }
+
+    &:active {
+      background: @red-80;
+    }
   }
 }
 
@@ -65,31 +123,35 @@
   top: 10px;
 }
 
-.ant-alert-with-description .anticon.ant-alert-icon {
-  left: 18px;
-  top: 15px;
-}
+.ant-alert-with-description {
+  padding: 16px 16px 16px 48px;
 
-.ant-alert-warning {
-  .ant-alert-description a {
-    border-bottom: 1px dotted rgba(0, 0, 0, 0);
-    color: @blue-70;
-    transition: 0.2s border @photon-easing;
-
-    &:hover,
-    &:focus {
-      color: @blue-50;
-    }
-
-    &:active {
-      color: @blue-60;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    .ant-alert-description a {
-      border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-    }
+  .anticon.ant-alert-icon {
+    left: 12px;
+    top: 12px;
   }
 }
+
+// .ant-alert-warning {
+//   .ant-alert-description a {
+//     border-bottom: 1px dotted rgba(0, 0, 0, 0);
+//     color: @blue-70;
+//     transition: 0.2s border @photon-easing;
+
+//     &:hover,
+//     &:focus {
+//       color: @blue-50;
+//     }
+
+//     &:active {
+//       color: @blue-60;
+//     }
+//   }
+
+//   &:hover,
+//   &:focus {
+//     .ant-alert-description a {
+//       border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+//     }
+//   }
+// }
