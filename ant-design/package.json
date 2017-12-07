@@ -1,6 +1,6 @@
 {
   "name": "photon-ant",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Mozilla Photon styles for the Ant Design UI library",
   "main": "index.less",
   "scripts": {
@@ -31,8 +31,8 @@
     "photon-colors": "1.3.0"
   },
   "devDependencies": {
-    "stylelint": "^8.3.1",
-    "stylelint-config-standard": "^18.0.0",
-    "stylelint-order": "^0.7.0"
+    "stylelint": "8.3.1",
+    "stylelint-config-standard": "18.0.0",
+    "stylelint-order": "0.7.0"
   }
 }
