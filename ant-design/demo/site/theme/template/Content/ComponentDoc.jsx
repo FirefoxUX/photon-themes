@@ -89,7 +89,6 @@ export default class ComponentDoc extends React.Component {
               {
                 !subtitle ? null : <span className="subtitle">{subtitle}</span>
               }
-              <EditButton title={<FormattedMessage id="app.content.edit-page" />} filename={filename} />
             </h1>
             {
               props.utils.toReactComponent(

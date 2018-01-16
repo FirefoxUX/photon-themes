@@ -73,7 +73,7 @@ export default class Article extends React.Component {
     const { locale } = this.context.intl;
     const isNotTranslated = locale === 'en-US' && typeof title === 'object';
     return (
-      <DocumentTitle title={`${title[locale] || title} - Ant Design`}>
+      <DocumentTitle title={`${title[locale] || title} - photon-ant`}>
         <article className="markdown" ref={(node) => { this.node = node; }}>
           {isNotTranslated && (
             <Alert
@@ -92,7 +92,6 @@ export default class Article extends React.Component {
               !subtitle || locale === 'en-US' ? null :
               <span className="subtitle">{subtitle}</span>
             }
-            <EditButton title={<FormattedMessage id="app.content.edit-page" />} filename={filename} />
           </h1>
           {
             !description ? null :

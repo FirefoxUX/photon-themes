@@ -170,6 +170,7 @@ export default class MainContent extends React.Component {
   }
 
   generateSubMenuItems(obj) {
+    // if (!obj) { obj = {}; }
     const { themeConfig } = this.props;
     const topLevel = (obj.topLevel || []).map(this.generateMenuItem.bind(this, true));
     const itemGroups = Object.keys(obj).filter(isNotTopLevel)
@@ -201,7 +202,7 @@ export default class MainContent extends React.Component {
       const insertCategory = categories.filter(
         cat => (themeConfig.categoryOrder[cat] ? themeConfig.categoryOrder[cat] <= i : i === result.length - 1)
       )[0];
-      if (insertCategory) {
+      if (insertCategory && menuItems[insertCategory]) {
         const target = (
           <SubMenu title={<h4>{insertCategory}</h4>} key={insertCategory}>
             {this.generateSubMenuItems(menuItems[insertCategory])}

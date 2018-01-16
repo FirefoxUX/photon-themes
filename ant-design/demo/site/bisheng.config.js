@@ -19,9 +19,7 @@ module.exports = {
   port: 8001,
   source: {
     components: './components',
-    docs: './docs',
     changelog: [
-      'CHANGELOG.zh-CN.md',
       'CHANGELOG.en-US.md',
     ],
   },

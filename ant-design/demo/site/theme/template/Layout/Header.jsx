@@ -154,58 +154,11 @@ export default class Header extends React.Component {
     });
 
     const menu = [
-      <Button ghost size="small" onClick={this.handleLangChange} className="header-lang-button" key="lang-button">
-        <FormattedMessage id="app.header.lang" />
-      </Button>,
-      <Select
-        key="version"
-        className="version"
-        size="small"
-        dropdownMatchSelectWidth={false}
-        defaultValue={antdVersion}
-        onChange={this.handleVersionChange}
-        getPopupContainer={trigger => trigger.parentNode}
-      >
-        {versionOptions}
-      </Select>,
       <Menu className="menu-site" mode={menuMode} selectedKeys={[activeMenuItem]} id="nav" key="nav">
-        <Menu.Item key="home">
-          <Link to={utils.getLocalizedPathname('/', isZhCN)}>
-            <FormattedMessage id="app.header.menu.home" />
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="docs/spec">
-          <Link to={utils.getLocalizedPathname('/docs/spec/introduce', isZhCN)}>
-            <FormattedMessage id="app.header.menu.spec" />
-          </Link>
-        </Menu.Item>
         <Menu.Item key="docs/react">
-          <Link to={utils.getLocalizedPathname('/docs/react/introduce', isZhCN)}>
+          <Link to={utils.getLocalizedPathname('/components/button/', isZhCN)}>
             <FormattedMessage id="app.header.menu.components" />
           </Link>
-        </Menu.Item>
-        <Menu.Item key="docs/pattern">
-          <Link to={utils.getLocalizedPathname('/docs/pattern/navigation', isZhCN)}>
-            <FormattedMessage id="app.header.menu.pattern" />
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="docs/resource">
-          <Link to={utils.getLocalizedPathname('/docs/resource/download', isZhCN)}>
-            <FormattedMessage id="app.header.menu.resource" />
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="pro">
-          <a
-            href="http://pro.ant.design"
-            className="header-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FormattedMessage id="app.header.menu.pro" />
-            <span style={{ display: 'inline-block', position: 'relative', top: -2, width: 6, marginLeft: 4 }}>
-              <Badge dot />
-            </span>
-          </a>
         </Menu.Item>
       </Menu>,
     ];
@@ -231,13 +184,7 @@ export default class Header extends React.Component {
           </Popover>
         ) : null}
         <Row>
-          <Col xxl={4} xl={5} lg={5} md={8} sm={24} xs={24}>
-            <Link to={utils.getLocalizedPathname('/', isZhCN)} id="logo">
-              <img alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" />
-              <img alt="Ant Design" src="https://gw.alipayobjects.com/zos/rmsportal/DmMsyewtkhAzjNkeGnYe.svg" />
-            </Link>
-          </Col>
-          <Col xxl={20} xl={19} lg={19} md={16} sm={0} xs={0}>
+          <Col xxl={24} xl={24} lg={24} md={24} sm={0} xs={0}>
             <div id="search-box">
               <Icon type="search" />
               <AutoComplete

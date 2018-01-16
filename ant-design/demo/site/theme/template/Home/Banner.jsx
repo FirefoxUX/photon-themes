@@ -30,25 +30,13 @@ export default function Banner({ location }) {
           <p key="content"><FormattedMessage id="app.home.slogan" /></p>
           <span className="line" key="line" />
           <div key="button1" className="start-button">
-            <Link to={utils.getLocalizedPathname('/docs/spec/introduce', isZhCN)}>
+            <Link to={utils.getLocalizedPathname('/components/button/', isZhCN)}>
               <Button type="primary" size="large">
-                <FormattedMessage id="app.home.introduce" />
-              </Button>
-            </Link>
-            <Link to={utils.getLocalizedPathname('/docs/react/introduce', isZhCN)}>
-              <Button type="primary" ghost size="large">
                 <FormattedMessage id="app.home.start" />
               </Button>
             </Link>
           </div>
-          <GitHubButton
-            key="github-button"
-            type="stargazers"
-            namespace="ant-design"
-            repo="ant-design"
-          />
         </QueueAnim>
-        <Icon type="down" className="down" />
       </ScrollElement>
     </section>
   );
