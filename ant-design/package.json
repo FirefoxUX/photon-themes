@@ -4,8 +4,9 @@
   "description": "Mozilla Photon styles for the Ant Design UI library",
   "main": "index.less",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "stylelint 'src/**/*.less' --format less --config ./.stylelintrc --fix"
+    "lint": "stylelint 'src/**/*.less' --format less --config ./.stylelintrc --fix",
+    "setup-demo": "cd demo && npm install",
+    "start": "cd demo && npm run start"
   },
   "repository": {
     "type": "git",

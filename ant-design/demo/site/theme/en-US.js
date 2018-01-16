@@ -21,7 +21,7 @@ module.exports = {
     'app.demo.copied': 'Copied!',
     'app.demo.codepen': 'Open in CodePen',
     'app.demo.riddle': 'Open in Riddle',
-    'app.home.slogan': 'A UI Design Language',
+    'app.home.slogan': 'Living style guide for testing photon-ant components.',
     'app.home.introduce': 'Introduce',
     'app.home.start': 'Get Started',
     'app.home.best-practice': 'Best Practice',
