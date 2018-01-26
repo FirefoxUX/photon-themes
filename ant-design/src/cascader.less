@@ -1,0 +1,36 @@
+.ant-cascader-picker,
+.ant-input.ant-cascader-input {
+  background: #E1E1E2;
+  border: none;
+  color: #0C0C0D;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.ant-cascader-picker-clear {
+  background: #E1E1E2;
+}
+
+.ant-cascader-menus {
+  border-radius: 4px;
+  box-shadow: @shadow-1-down;
+  overflow: hidden;
+
+  .ant-cascader-menu {
+    transition: 0.3s all ease;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+.ant-cascader-menu-item-disabled {
+  opacity: 0.4;
+}

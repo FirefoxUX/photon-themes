@@ -1,0 +1,85 @@
+.ant-checkbox-wrapper {
+  .ant-checkbox-inner {
+    background-color: fade(@grey-90, 10%);
+    border: 1px solid fade(@grey-90, 30%);
+
+    &::after {
+      color: @white;
+      content: '\e90b';
+      font-family: "photon-icons" !important;
+      font-size: 0.75em;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &:hover .ant-checkbox-inner {
+    background-color: fade(@grey-90, 20%);
+    border: 1px solid fade(@grey-90, 30%);
+  }
+
+  &:active .ant-checkbox-inner {
+    background-color: fade(@grey-90, 30%);
+    border: 1px solid fade(@grey-90, 30%);
+  }
+
+  &:focus .ant-checkbox-inner {
+    border: none;
+    box-shadow: inset 1px 1px 0 @blue-50; //, 1px 1px 0 @blue-50, 4px 4px 0 @fade(@blue-50, 30%);
+  }
+
+
+  // Checked styles
+  .ant-checkbox-checked,
+  .ant-checkbox-indeterminate {
+    .ant-checkbox-inner {
+      background-color: @blue-60;
+      border: none;
+
+      &::after {
+        border: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  // Indeterminate
+  .ant-checkbox-indeterminate {
+    .ant-checkbox-inner {
+      &::after {
+        color: @white;
+        content: "\E624";
+        font-family: "anticon" !important;
+      }
+    }
+  }
+
+  &:hover .ant-checkbox-checked,
+  &:hover .ant-checkbox-indeterminate {
+    .ant-checkbox-inner {
+      background-color: @blue-70;
+    }
+  }
+
+  &:active .ant-checkbox-checked,
+  &:active .ant-checkbox-indeterminate {
+    .ant-checkbox-inner {
+      background-color: @blue-80;
+    }
+  }
+
+  &:focus .ant-checkbox-checked,
+  &:focus .ant-checkbox-indeterminate {
+    .ant-checkbox-inner {
+      border: none;
+      box-shadow: inset 1px 1px 0 @blue-50; //, 1px 1px 0 @blue-50, 4px 4px 0 @fade(@blue-50, 30%);
+    }
+  }
+
+  .ant-checkbox-disabled {
+    opacity: 0.4;
+  }
+}

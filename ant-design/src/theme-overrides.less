@@ -46,8 +46,8 @@
 
 // The background colors for active and hover states for things like
 // list items or table cells.
-@item-active-bg         : @primary-1;
-@item-hover-bg          : @primary-1;
+@item-active-bg         : fade(@blue-50, 15%);
+@item-hover-bg          : fade(@blue-50, 10%);
 
 // ICONFONT
 @iconfont-css-prefix    : anticon;
@@ -59,8 +59,6 @@
 @link-active-color      : @primary-7;
 @link-hover-decoration  : none;
 
-// Animation
-@photon-easing          : cubic-bezier(.07,.95,0,1);
 
 // Border color
 @border-color-base      : rgba(12, 12, 13, 0.3);        // base border outline a component
@@ -76,7 +74,7 @@
 // Default background color for disabled states, Collapse wrappers,
 // and several active and hover states.
 @background-color-base  : #f7f7f7;
-@background-color-active: #eee;
+@background-color-active: #EEE;
 
 // Disabled states
 @disabled-color         : fade(@black, 40%);
@@ -85,7 +83,7 @@
 
 // Photon-specific
 .ant-input[disabled],
-.ant-select-disabled { opacity: 0.4; }
+  .ant-select-disabled { opacity: 0.4; }
 
 // .ant-select { background: rgba(12, 12, 13, 0.1); }
 // .ant-select-selection { background: none; }
@@ -119,35 +117,27 @@
 @btn-font-weight        : 500;
 @btn-border-radius-base : @border-radius-base;
 @btn-border-radius-sm   : @border-radius-base;
-
 @btn-primary-color      : @white;
 @btn-primary-bg         : @primary-color;
-
 @btn-default-color      : @text-color;
 @btn-default-bg         : @white;
 @btn-default-border     : @border-color-base;
-
 @btn-danger-color       : @error-color;
 @btn-danger-bg          : @background-color-base;
 @btn-danger-border      : @border-color-base;
-
 @btn-disable-color      : @disabled-color;
 @btn-disable-bg         : @disabled-bg;
 @btn-disable-border     : @border-color-base;
-
 @btn-padding-base       : 0 15px;
 @btn-font-size-lg       : @font-size-lg;
 @btn-padding-lg         : @btn-padding-base;
 @btn-padding-sm         : 0 7px;
-
 @btn-height-base        : 28px;
 @btn-height-lg          : 32px;
 @btn-height-sm          : 22px;
-
 @btn-circle-size        : @btn-height-base;
 @btn-circle-size-lg     : @btn-height-lg;
 @btn-circle-size-sm     : @btn-height-sm;
-
 @btn-group-border       : @primary-7;
 
 // Radio buttons
@@ -186,8 +176,8 @@
 @grid-gutter-width      : 0;
 
 // Layout
-@layout-body-background      : #ececec;
-@layout-header-background    : #404040;
+@layout-body-background      : @white;
+@layout-header-background    : @white;
 @layout-header-height        : 64px;
 @layout-header-padding       : 0 50px;
 @layout-footer-padding       : 24px 50px;
@@ -211,9 +201,9 @@
 @zindex-tooltip         : 1060;
 
 // Animation
-@animation-duration-slow: .2s; // Modal
-@animation-duration-base: .15s;
-@animation-duration-fast: .1s; // Tooltip
+@animation-duration-slow: 0.2s; // Modal
+@animation-duration-base: 0.15s;
+@animation-duration-fast: 0.1s; // Tooltip
 
 // Form
 // ---
@@ -246,7 +236,7 @@
 //** Tooltip text color
 @tooltip-color: @white;
 //** Tooltip background color
-@tooltip-bg: rgba(0, 0, 0, .75);
+@tooltip-bg: rgba(0, 0, 0, 0.75);
 //** Tooltip arrow width
 @tooltip-arrow-width: 5px;
 //** Tooltip distance with trigger
@@ -260,6 +250,7 @@
 .ant-tooltip-inner {
   filter: drop-shadow(@shadow-1);
 }
+
 .ant-popover-arrow,
 .ant-tooltip-arrow, {
   z-index: @zindex-tooltip;
@@ -310,13 +301,13 @@
 @table-header-bg: @background-color-base;
 @table-header-sort-bg: @background-color-active;
 @table-row-hover-bg: @primary-1;
-@table-selected-row-bg: #fafafa;
+@table-selected-row-bg: #FAFAFA;
 @table-padding-vertical: 16px;
 @table-padding-horizontal: 8px;
 
 // Tag
 // --
-@tag-default-bg: #f3f3f3;
+@tag-default-bg: #F3F3F3;
 @tag-default-color: @text-color;
 @tag-font-size: @font-size-base;
 
@@ -340,8 +331,8 @@
 
 // Rate
 // ---
-@rate-star-color: #f5a623;
-@rate-star-bg: #e9e9e9;
+@rate-star-color: #F5A623;
+@rate-star-bg: #E9E9E9;
 
 // Card
 // ---
@@ -351,7 +342,7 @@
 
 // Tabs
 // ---
-@tabs-card-head-background: #f9f9f9;
+@tabs-card-head-background: #F9F9F9;
 @tabs-title-font-size: @font-size-lg;
 
 // BackTop
@@ -366,6 +357,6 @@
 @avatar-font-size-base: 18px;
 @avatar-font-size-lg: 24px;
 @avatar-font-size-sm: 14px;
-@avatar-bg: #ccc;
+@avatar-bg: #CCC;
 @avatar-color: @white;
 @avatar-border-radius: @border-radius-base;

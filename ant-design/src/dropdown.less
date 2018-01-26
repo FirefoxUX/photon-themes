@@ -1,0 +1,86 @@
+.ant-btn.ant-dropdown-trigger {
+  flex-direction: row;
+}
+
+.ant-cascader-menu-item.ant-cascader-menu-item-expand.ant-cascader-menu-item-active {
+  background: fade(@blue-60, 70%);
+  &,
+  &::after {
+    color: @white;
+  }
+
+  &,
+  &:hover,
+  &:focus {
+    font-weight: 300;
+  }
+}
+
+.ant-cascader-menu-item.ant-cascader-menu-item-active {
+  background: @blue-60;
+
+  &,
+  &::after {
+    color: @white;
+  }
+}
+
+.ant-cascader-menu-item,
+.ant-cascader-menu-submenu,
+.ant-select-dropdown-menu-item,
+.ant-select-dropdown-menu-submenu,
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu {
+  background: @white;
+  color: @black;
+  font-weight: 300;
+
+  &::after {
+    transition: 0.3s all ease;
+  }
+
+  &:not(.ant-dropdown-menu-submenu-disabled),
+  &:not(.ant-cascader-menu-submenu-disabled),
+  &:not(.ant-select-dropdown-menu-submenu-disabled),
+  & > a {
+    &:hover,
+    &:focus,
+    &:active {
+      background: @blue-60;
+
+      &,
+      .ant-cascader-menu-submenu-title,
+      .ant-dropdown-menu-submenu-title,
+      .ant-select-dropdown-menu-submenu-title {
+        &,
+        &::after {
+          color: @white;
+        }
+      }
+    }
+  }
+
+  &.ant-cascader-menu-submenu-disabled,
+  &.ant-dropdown-menu-submenu-disabled,
+  &.ant-select-dropdown-menu-submenu-disabled {
+    &,
+    .ant-cascader-menu-submenu-title,
+    .ant-dropdown-menu-submenu-title,
+    .ant-select-dropdown-menu-submenu-title,
+    a {
+      cursor: not-allowed;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: fade(@blue-60, 40%);
+    }
+  }
+}
+
+.ant-select-dropdown-menu-item-selected {
+  background: @blue-60;
+  color: @white;
+  font-weight: 600;
+}
